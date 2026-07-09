@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <h2>Inventory Dashboard</h2>
+    <ul>
+      <li>📦 Stock</li>
+      <li>🚚 Suppliers</li>
+      <li>🛒 Orders</li>
+      <li>📈 Reports</li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <header>
+      <h1>Inventory Management</h1>
+      <button id="refresh">Refresh</button>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Total Products</h3>
+        <p id="products-count">1,250</p>
+      </div>
+      <div class="card">
+        <h3>Suppliers</h3>
+        <p id="suppliers-count">45</p>
+      </div>
+      <div class="card">
+        <h3>Pending Orders</h3>
+        <p id="orders-count">78</p>
+      </div>
+    </section>
+
+    <section class="chart">
+      <canvas id="inventoryChart"></canvas>
+    </section>
+
+    <section class="table">
+      <h2>Recent Inventory Activity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Item</th>
+            <th>Action</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2026-07-08</td>
+            <td>Laptops</td>
+            <td>Restocked</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>2026-07-09</td>
+            <td>Monitors</td>
+            <td>Ordered</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <td>2026-07-09</td>
+            <td>Keyboards</td>
+            <td>Shipped</td>
+            <td>100</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
